@@ -85,6 +85,17 @@ autocmd FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
+set clipboard+=unnamedplus
+
+" WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+  augroup WSLYank
+    autocmd!
+    autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+  augroup END
+endif
+
 
 set matchpairs+=<:> " use % to jump between pairs
 
