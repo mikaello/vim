@@ -1,0 +1,13 @@
+bundle/*
+eclim/*
+plugin/*
+plugged
+!.keep
+.vim
+spell
+init.vim
+shada
+tmp
+session/
+.netrwhist
+autoload/
