@@ -1,3 +1,6 @@
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 " install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -108,13 +111,12 @@ set encoding=utf-8
 
 " Whitespace
 set wrap
-set textwidth=79
+"set textwidth=80 " will autowrap if txt file goes beyond this
 set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set noshiftround
 
 " Status bar
 set laststatus=2
@@ -129,7 +131,7 @@ set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title
-set visualbell
+"set visualbell
 set noerrorbells
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
