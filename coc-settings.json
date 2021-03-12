@@ -6,6 +6,8 @@
     "typescriptreact",
     "css",
     "markdown",
+    "xml",
+    "html",
     "json"
   ],
   "tsserver.formatOnType": true,
