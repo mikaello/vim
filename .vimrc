@@ -38,6 +38,9 @@ nmap <silent> gr <Plug>(coc-references)
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
+" Credit: https://vim.fandom.com/wiki/Format_your_xml_document_using_xmllint
+autocmd FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
+
 " different cursor in edit and normal mode
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
